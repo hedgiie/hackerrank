@@ -10,11 +10,16 @@ public class D6LetsReview {
         Scanner sc = new Scanner(System.in);
         int item = sc.nextInt();
         String[] names = new String[item];
-        for(int counter = 1 ; counter <= names.length ; counter ++){
-            Scanner scn = new Scanner(System.in);
-            String test = scn.nextLine();
-            names[counter - 1] = test;
+        System.out.println(names.length);
+        for(int counter = 0 ; counter <= names.length ; counter ++){
+//            Scanner scn = new Scanner(System.in);
+            String test = sc.nextLine();
+            System.out.println(counter +" "+test);
+            if(counter == 0 ){
 
+            }else{
+                names[counter - 1] = test;
+            }
         }
 
         String oddString = "";
