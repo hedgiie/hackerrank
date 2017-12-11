@@ -46,9 +46,9 @@ public class Day8DictionariesandMaps {
             }
         }
 
-        phonebook.forEach((key, value) -> {
-            System.out.println("Key : " + key + " Value : " + value);
-        });
+//        phonebook.forEach((key, value) -> {
+//            System.out.println("Key : " + key + " Value : " + value);
+//        });
         in.close();
     }
 }
