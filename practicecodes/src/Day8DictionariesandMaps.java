@@ -16,17 +16,7 @@ public class Day8DictionariesandMaps {
             String np[] = namePhone.split(" ");
             phonebook.put(np[0], np[1]);
         }
-//        for(int i = 0; i < n; i++){
-//            phonebook.forEach();
-//        }
 
-//        HashMap<String, HashMap> selects = new HashMap<String, HashMap>();
-
-//        for(Map.Entry<String, HashMap> entry : phonebook.entrySet()) {
-//            String key = entry.getKey();
-//            HashMap value = entry.getValue();
-//            System.out.println(key+" "+value);
-//        }
         Vector phonebookfinder = new Vector();
         int counter = 0;
         while(in.hasNext()){
@@ -46,9 +36,6 @@ public class Day8DictionariesandMaps {
             }
         }
 
-//        phonebook.forEach((key, value) -> {
-//            System.out.println("Key : " + key + " Value : " + value);
-//        });
         in.close();
     }
 }
