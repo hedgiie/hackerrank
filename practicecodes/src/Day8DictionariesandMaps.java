@@ -13,8 +13,6 @@ public class Day8DictionariesandMaps {
             String namePhone = in.nextLine();
             if (i == 0)
                 continue;
-
-//            int phone = in.nextInt();
             String np[] = namePhone.split(" ");
             phonebook.put(np[0], np[1]);
         }
@@ -29,11 +27,24 @@ public class Day8DictionariesandMaps {
 //            HashMap value = entry.getValue();
 //            System.out.println(key+" "+value);
 //        }
+        Vector phonebookfinder = new Vector();
+        int counter = 0;
+        while(in.hasNext()){
+            String s = in.next();
+            // Write code here
+            phonebookfinder.add(s);
+        }
 
-//        while(in.hasNext()){
-//            String s = in.next();
-//            // Write code here
-//        }
+        for(int cntr = 0; cntr < phonebookfinder.size(); cntr ++){
+            String search = phonebookfinder.get(cntr).toString();
+            if( phonebook.containsKey(search) ){
+                Object o = phonebook.get(search);
+                System.out.println(search+"="+o.toString());
+
+            }else {
+                System.out.println("Not found");
+            }
+        }
 
         phonebook.forEach((key, value) -> {
             System.out.println("Key : " + key + " Value : " + value);
