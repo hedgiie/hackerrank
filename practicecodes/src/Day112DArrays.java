@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class Day112DArrays {
     public static void main(String[] args) {
-        int greatest =0;
+        int greatest =-111111111;
         Scanner in = new Scanner(System.in);
         int arr[][] = new int[6][6];
         for(int i=0; i < 6; i++){
