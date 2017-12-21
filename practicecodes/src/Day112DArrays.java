@@ -16,7 +16,6 @@ public class Day112DArrays {
         }
         for(int i=0; i < 6; i++){
             for(int j=0; j < 6; j++){
-//                arr[i][j] = in.nextInt();
                 System.out.print(arr[i][j]+" ");
             }
             System.out.println();
@@ -35,15 +34,6 @@ public class Day112DArrays {
                 for (int inGroup = upAGroupCol ; inGroup < 6; inGroup++) {
                     treeCntr++;
 
-//                    System.out.print(arr[upAGroupRow][inGroup] + " ");
-//                    sum += arr[upAGroupRow][inGroup];
-
-//                    if( treeCntr > 3 ){
-//                        resultTopA[resultCntr++] = sum;
-//                        System.out.println(" => "+sum);
-//                        sum = 0;
-//                        break;
-//                    }
                     System.out.print(arr[upAGroupRow][inGroup] + " ");
                     sum += arr[upAGroupRow][inGroup];
                     if( treeCntr > 2 ){
@@ -52,11 +42,7 @@ public class Day112DArrays {
                         sum = 0;
                         break;
                     }
-//                    if(groupOf4 == 3){
-//                        resultTopA[resultCntr++] = sum;
-//                        System.out.println(" => "+sum);
-//                    }
-//                    treeCntr++;
+
                 }
                 groupOf4++;
                 if(groupOf4 >= 4) {
@@ -79,12 +65,7 @@ public class Day112DArrays {
                 int treeCntr = 0;
                 for (int inGroup = upAGroupCol ; inGroup < 6; inGroup++) {
                     treeCntr++;
-//                    if(treeCntr > 3){
-//                        resultbottomA[resultCntr++] = sum;
-//                        System.out.println(" => "+sum);
-//                        sum = 0;
-//                        break;
-//                    }
+
                     System.out.print(arr[upAGroupRow][inGroup] + " ");
                     sum += arr[upAGroupRow][inGroup];
                     if(treeCntr > 2){
@@ -123,6 +104,6 @@ public class Day112DArrays {
             }
             System.out.println("");
         }
-        System.out.println(greatest);
+        System.out.println("largest is: "+greatest);
     }
 }
