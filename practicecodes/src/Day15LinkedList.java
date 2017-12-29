@@ -1,11 +1,10 @@
 
-import java.io.*;
 import java.util.*;
 
-class Node {
+class Node15D {
     int data;
-    Node next;
-    Node(int d) {
+    Node15D next;
+    Node15D(int d) {
         data = d;
         next = null;
     }
@@ -13,12 +12,12 @@ class Node {
 
 class Day15LinkedList {
 
-    public static  Node insert(Node head,int data) {
+    public static Node15D insert(Node15D head, int data) {
         //Complete this method
         if(head == null)
-            return new Node( data);
+            return new Node15D( data);
         else if(head.next == null){
-            head.next = new Node(data);
+            head.next = new Node15D(data);
         }
         else{
             insert(head.next,data);
@@ -27,8 +26,8 @@ class Day15LinkedList {
         return head;
     }
 
-    public static void display(Node head) {
-        Node start = head;
+    public static void display(Node15D head) {
+        Node15D start = head;
         while(start != null) {
             System.out.print(start.data + " ");
             start = start.next;
@@ -37,7 +36,7 @@ class Day15LinkedList {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        Node head = null;
+        Node15D head = null;
         int N = sc.nextInt();
 
         while(N-- > 0) {
