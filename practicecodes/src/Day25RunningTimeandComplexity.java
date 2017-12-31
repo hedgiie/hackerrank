@@ -21,6 +21,7 @@ public class Day25RunningTimeandComplexity {
             }
         }
     }
+
     public static boolean checkPrime(int n)
     {
         if(n == 1)
