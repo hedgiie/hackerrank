@@ -15,9 +15,37 @@ import static java.util.stream.Collectors.toList;
 public class DynamicArray {
 
     // Complete the dynamicArray function below.
-    static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
-        return new LinkedList();
+//    static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
+//        return new LinkedList();
+//
+//    }
 
+    static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
+        int lastAnswer = 0;
+        ArrayList<ArrayList<Integer>> seqList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            seqList.add(new ArrayList<Integer>());
+        }
+
+        List<Integer> seq = new ArrayList<>();
+        List<Integer> lastAnswerList = new ArrayList<>();
+        for (int i = 0; i < queries.size(); i++) {
+            int x = queries.get(i).get(1);
+            int y = queries.get(i).get(2);
+            int type = queries.get(i).get(0);
+            int index = (x ^ lastAnswer) % n;
+            seq = seqList.get(index);
+            if (type == 1) {
+                seqList.get(index).add(y);
+            }
+            else if (type == 2) {
+                y = (queries.get(i).get(2)) % seq.size();
+                lastAnswer = seqList.get(index).get(y);
+                lastAnswerList.add(lastAnswer);
+                //System.out.println(lastAnswer);
+            }
+        }
+        return lastAnswerList;
     }
 
     public static void main(String[] args) throws IOException {
