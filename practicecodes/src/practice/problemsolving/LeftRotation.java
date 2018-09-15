@@ -27,9 +27,23 @@ public class LeftRotation {
         String[] aItems = scanner.nextLine().split(" ");
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
+        int index = 0;
+        int counter = 0;
         for (int i = 0; i < n; i++) {
             int aItem = Integer.parseInt(aItems[i]);
-            a[i] = aItem;
+//            System.out.print(aItem+" ");
+            counter = i;
+            for(int x = d; x > 0 ; x--){
+                counter--;
+                if(counter < 0){
+                    counter = d;
+                }
+            }
+            a[counter] = aItem;
+        }
+//        System.out.println("---------");
+        for (int i = 0; i < n; i++) {
+            System.out.print(a[i]+" ");
         }
 
         scanner.close();
