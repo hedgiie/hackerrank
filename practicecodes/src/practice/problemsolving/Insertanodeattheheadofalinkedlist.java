@@ -56,8 +56,13 @@ public class Insertanodeattheheadofalinkedlist {
      *
      */
     static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
-
-
+        SinglyLinkedListNode node = new SinglyLinkedListNode(data);
+        if (llist == null) {
+            // Do nothing
+        } else {
+            node.next = llist;
+        }
+        return node;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
