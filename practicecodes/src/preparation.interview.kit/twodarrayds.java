@@ -10,7 +10,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Twodarrayds {
+public class twodarrayds {
 
     // Complete the hourglassSum function below.
     static int hourglassSum(int[][] arr) {
