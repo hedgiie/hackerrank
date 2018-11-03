@@ -65,8 +65,20 @@ public class PrintInReverse {
      *
      */
     static void reversePrint(SinglyLinkedListNode head) {
-
-
+        ArrayList<SinglyLinkedListNode> list = new ArrayList<>();
+        list.add(head);
+        if (head == null) {
+            return;
+        }
+        SinglyLinkedListNode current = head.next;
+        list.add(current);
+        while(current.next != null) {
+            current = current.next;
+            list.add(current);
+        }
+        for (int i = list.size() - 1; i >= 0; i--) {
+            System.out.println(list.get(i).data);
+        }
     }
     private static final Scanner scanner = new Scanner(System.in);
 
