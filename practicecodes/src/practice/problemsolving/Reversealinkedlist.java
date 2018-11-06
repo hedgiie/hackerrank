@@ -66,7 +66,20 @@ public class Reversealinkedlist {
      */
     static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
 
-        return new SinglyLinkedListNode(0);
+        if(head == null)
+            return null;
+        SinglyLinkedListNode result = new SinglyLinkedListNode(0);
+        while(head != null){
+            if(head.next == null){
+                result.data = head.data;
+                break;
+            }
+            SinglyLinkedListNode current = new SinglyLinkedListNode(head.data);
+            current.next = result.next;
+            result.next = current;
+            head = head.next;
+        }
+        return result;
     }
     private static final Scanner scanner = new Scanner(System.in);
 
