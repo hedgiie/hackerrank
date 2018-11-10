@@ -61,9 +61,20 @@ public class Comparetwolinkedlists {
      *
      */
     static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
-        return true;
+        if(head1!=null && head2!=null)
+        {
+            if(head1.data==head2.data)
+                return compareLists(head1.next,head2.next);
+            else
+                return false;
+        }
+        else if(head1==null && head2==null) // both null at the same time
+            return true;
+        else
+            return false;   // if any one is null
 
     }
+
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
