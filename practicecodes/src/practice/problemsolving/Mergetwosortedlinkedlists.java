@@ -81,7 +81,6 @@ public class Mergetwosortedlinkedlists {
             head1.next = mergeLists(head1.next, head2);
         }
         return head1;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
