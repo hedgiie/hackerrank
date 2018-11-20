@@ -32,8 +32,8 @@ public class Getthevalueofthenodeataspecificpos {
         public void insertNode(int nodeData) {
             SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
 
-            if (this.head == null) {
-                this.head = node;
+            if (head == null) {
+                head = node;
             } else {
                 this.tail.next = node;
             }
